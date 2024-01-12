@@ -1,0 +1,11 @@
+.mainModal {
+  background-color: rgb(98, 98, 98);
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  font-size: 15px;
+}
