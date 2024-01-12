@@ -1,0 +1,29 @@
+.topHeader > div {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.topHeader {
+  height: 50px;
+  background-color: red;
+}
+.topHeader h3 {
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cartButton {
+  width: 120px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(138, 3, 3);
+  border-radius: 20px;
+  color: white;
+}
