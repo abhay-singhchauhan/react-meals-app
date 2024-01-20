@@ -1,0 +1,26 @@
+.MealCont {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.MealCont > div {
+  width: 96%;
+  text-align: start;
+  margin: auto;
+  border-bottom: 1px solid grey;
+}
+.MealCont > div > h5:nth-child(1) {
+  margin-bottom: 0px;
+}
+.MealCont > div > h5:nth-child(3) {
+  margin-top: 0px;
+  color: rgb(178, 29, 29);
+}
+.MealCont > div > p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

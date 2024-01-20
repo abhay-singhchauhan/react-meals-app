@@ -1,14 +1,16 @@
 import React from "react";
 import Header from "./components/Layout/Header";
 import Modal from "./components/Layout/Modal";
+import MealList from "./components/Meals/Meallist";
+import { Fragment } from "react";
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <Header></Header>
       <Modal></Modal>
-      <h2>Let's get started!</h2>
-    </div>
+      <MealList></MealList>
+    </Fragment>
   );
 }
 
