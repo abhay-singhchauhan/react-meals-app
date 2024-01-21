@@ -1,5 +1,6 @@
 import React from "react";
 import "./Meallist.css";
+import Input from "../UI/input";
 
 const Meallist = () => {
   const arr = [
@@ -10,10 +11,19 @@ const Meallist = () => {
   return (
     <div className="MealCont">
       {arr.map((ele) => (
-        <div className="Meal">
-          <h5>{ele.Name}</h5>
-          <p>{ele.Title}</p>
-          <h5 className="Price">$ {ele.Price}</h5>
+        <div>
+          <div className="Meal">
+            <h5>{ele.Name}</h5>
+            <p>{ele.Title}</p>
+            <h5 className="Price">$ {ele.Price}</h5>
+          </div>
+          <div>
+            <Input
+              input={{ className: "forItemIncrease", defaultValue: "1" }}
+              label="Amount"
+            ></Input>
+            <button>+Add</button>
+          </div>
         </div>
       ))}
     </div>

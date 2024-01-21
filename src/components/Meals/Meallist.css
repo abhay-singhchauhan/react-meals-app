@@ -8,19 +8,31 @@
 }
 
 .MealCont > div {
-  width: 96%;
-  text-align: start;
-  margin: auto;
-  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.MealCont > div > h5:nth-child(1) {
+.MealCont > div > div > h5:nth-child(1) {
   margin-bottom: 0px;
 }
-.MealCont > div > h5:nth-child(3) {
+.MealCont > div > div > h5:nth-child(3) {
   margin-top: 0px;
   color: rgb(178, 29, 29);
 }
-.MealCont > div > p {
+.MealCont > div > div > p {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.MealCont > div > div:nth-child(1) {
+  width: 90%;
+}
+.MealCont > div > div:nth-child(2) {
+  width: 10%;
+}
+.MealCont > div button {
+  width: 100%;
+  background-color: rgb(178, 29, 29);
+  color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
 }
