@@ -1,13 +1,20 @@
-import React from "react";
 import "./Meallist.css";
 import Input from "../UI/input";
+import CartContext from "../../store/cart-context";
+import { useContext } from "react";
 
 const Meallist = () => {
+  const context = useContext(CartContext);
+
   const arr = [
-    { Name: "Abhay", Title: "dkjsfh iaidfh ", Price: "2000" },
-    { Name: "Paneer", Title: "Hi", Price: "3000" },
+    { id: 1, Name: "Abhay", Title: "dkjsfh iaidfh ", Price: "2000" },
+    { id: 2, Name: "Paneer", Title: "Hi", Price: "3000" },
   ];
 
+  function addItemToCart(e) {
+    context.addItem(e);
+    console.log(context);
+  }
   return (
     <div className="MealCont">
       {arr.map((ele) => (
@@ -22,7 +29,13 @@ const Meallist = () => {
               input={{ className: "forItemIncrease", defaultValue: "1" }}
               label="Amount"
             ></Input>
-            <button>+Add</button>
+            <button
+              onClick={() => {
+                return addItemToCart(ele);
+              }}
+            >
+              +Add
+            </button>
           </div>
         </div>
       ))}
