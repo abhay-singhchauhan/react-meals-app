@@ -10,7 +10,7 @@ const CartProvider = (props) => {
     cartState.map((ele) => {
       if (ele.id === id.id) {
         isPresent = true;
-        ele.amount = ele.amount + id.Price;
+        ele.amount = +ele.amount + +id.Price;
       }
     });
 
@@ -23,17 +23,37 @@ const CartProvider = (props) => {
   };
 
   console.log(cartState);
-  const removeItemFromCartHandler = (id) => {};
+  const removeItemFromCartHandler = (id) => {
+    let isZero = false;
+    cartState.map((ele) => {
+      if (ele.id === id.id) {
+        ele.amount = ele.amount - ele.Price;
+        if (ele.amount <= 0) {
+          isZero = true;
+        }
+      }
+    });
+    if (isZero) {
+      const arr = cartState.filter((e) => {
+        if (e.id !== id.id) {
+          return true;
+        }
+      });
+      setCartState(arr);
+    }
+    console.log(cartContext);
+  };
 
   const cartContext = {
     items: cartState,
-    totalAmount: cartState.reduce((total, current) => {
-      return total + current;
+    totalAmount: cartState.reduce((accumulator, currentValue) => {
+      console.log(accumulator);
+      return accumulator + +currentValue.amount;
     }, 0),
     addItem: addItemFromCartHandler,
     removeItem: removeItemFromCartHandler,
   };
-
+  console.log(cartContext);
   return (
     <CartContext.Provider value={cartContext}>
       {props.children}

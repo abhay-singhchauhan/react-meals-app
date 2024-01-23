@@ -1,3 +1,11 @@
+.mainlicont {
+  display: flex;
+}
+
+.mainlicont > div {
+  width: 50%;
+}
+
 .cart-items {
   list-style: none;
   margin: 0;
@@ -6,6 +14,37 @@
   overflow: auto;
 }
 
+.cart-items > div {
+  display: flex;
+  justify-content: space-between;
+}
+.priceAmountCount {
+  display: flex;
+
+  width: 100%;
+}
+
+.cart-items p {
+  margin-top: 0%;
+}
+.cart-items h4 {
+  margin-top: 0;
+  color: #8a2b06;
+}
+.plusminus {
+  display: flex;
+  width: 50px;
+  justify-content: space-between;
+}
+.plusminus > p {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border: 1px solid red;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 .total {
   display: flex;
   justify-content: space-between;
@@ -43,4 +82,8 @@
 .actions .button {
   background-color: #8a2b06;
   color: white;
+}
+
+#mainlicont {
+  display: flex;
 }
